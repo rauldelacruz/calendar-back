@@ -50,7 +50,7 @@ const loginUser = async(req, res = response ) => {
                 msg: 'Incorrect password'
             });
         }
-        const token = await generarJWT( user.id, user.name );
+        const token = await generateJWT( user.id, user.name );
         res.json({
             ok: true,
             uid: user.id,
